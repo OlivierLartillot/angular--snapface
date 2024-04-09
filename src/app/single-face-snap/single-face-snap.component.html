@@ -1,0 +1,24 @@
+<div class="face-snap-card" [ngClass]="{'face-snap-card--snapped': snapAdded}">
+  <h2>{{faceSnap.title | titlecase}}</h2>
+
+  <a routerLink="/facesnaps"> << Retour</a>
+
+  <p>Mise en ligne {{ faceSnap.createdDate | date: 'le dd MMMM YYYY ' }}</p>
+  <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
+  <p>{{ faceSnap.description }}</p>
+
+  <p *ngIf="faceSnap.location" >Photo prise à {{ faceSnap.location }}</p>
+
+  <p>
+    <button (click)="onSnap()">{{ textButtonSnap }}</button>
+    <span [ngStyle]="{ color: 'rgb(0, ' +  faceSnap.snaps + ' ,0)'}">Nbre snaps {{ faceSnap.snaps }}</span>
+  </p>
+
+  <!-- 1.0-2 min 1 avant la virgule et de 0 a 2 apres la virgule -->
+  <p>Virgules: {{ 558965.23223 | number: '1.0-1' }}</p>
+  <p>Percent: {{ 47 | percent }}</p>
+  <!-- currency: 'EUR' : 'code' -->
+  <p>Currency: {{ 0.0236 | currency: 'EUR' }}</p>
+</div>
+
+

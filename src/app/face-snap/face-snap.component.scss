@@ -1,0 +1,42 @@
+.face-snap-card {
+
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+
+  box-shadow: 4px 4px 20px lightgray;
+  border-radius: 50px;
+
+  width: 50%;
+  img {
+    width: 100%;
+  }
+  h2 {
+    margin-bottom: 0;
+  }
+  p {
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+
+
+
+  button {
+    background-color: transparent;
+    border: none;
+    box-shadow: 3px 3px 7px lightgray;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    outline: none;
+    &:hover{
+      transform: translate(1px, 1px);
+      box-shadow: lightgray 0 0 5px;
+    }
+  }
+
+  &--snapped{
+    border: 1px green solid;
+
+  }
+
+}

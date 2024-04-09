@@ -1,0 +1,17 @@
+
+
+<div class="blog-article">
+  <div>
+    <h2>{{ blogObject.title }}</h2>
+    <p>{{ blogObject.textIntroduction }}</p>
+    <p>{{ blogObject.createdDate }}</p>
+    <div class="block-buttons">
+      <div>
+        <a href="" class="voir-plus">Voir l'article</a>
+      </div>
+      <div class="categorie-label" [ngClass]="{'categorie-label--ville': blogObject.categorie === 'ville', 'categorie-label--animaux': blogObject.categorie === 'animaux' }">
+        {{ blogObject.categorie }}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+
+.landing-page-wrapper {
+  margin-top: 3rem;
+  text-align: center;
+
+  h2{
+
+    margin-bottom: 3rem;
+  }
+  .landing-page-card {
+
+    width: 80%;
+    margin: auto;
+    shape-outside: margin-box0;
+    box-sizing: border-box;
+    box-shadow: 7px 7px 20px lightblue;
+    padding: 5rem 3rem;
+  }
+  .call-to-action-btn {
+    margin-top: 3rem;
+    border: 0;
+    padding: 1rem;
+    background-color: aqua;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 7px 7px 5px lightblue;
+    &:hover{
+      transform: translate(3px, 3px);
+      box-shadow: 3px 3px 20px lightblue;
+
+    }
+
+  }
+
+}

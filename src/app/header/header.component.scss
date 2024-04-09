@@ -1,0 +1,29 @@
+header {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: grey;
+  text-align: center;
+  height: 10vh;
+  color: whitesmoke;
+
+  a {
+    background-color: aliceblue;
+    margin: 2rem;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 10px 10px 0 0 ;
+  }
+  a:hover {
+    color: orange;
+  }
+
+  .active {
+    color: red;
+    border-left: 1px  red solid;
+    border-top: 1px  red solid;
+    border-right: 1px  red solid;
+
+  }
+}
+
+
