@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FaceSnapListComponent } from '../face-snap-list/face-snap-list.component';
 import { FaceSnapsService } from '../services/face-snap.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-face-snap',

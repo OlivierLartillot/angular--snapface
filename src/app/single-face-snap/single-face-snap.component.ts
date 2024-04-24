@@ -3,6 +3,7 @@ import { FaceSnapsService } from '../services/face-snap.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { FaceSnap } from '../../models/face-snap.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-single-face-snap',
@@ -13,7 +14,8 @@ import { FaceSnap } from '../../models/face-snap.model';
 })
 export class SingleFaceSnapComponent implements OnInit{
 
-  faceSnap!: FaceSnap;
+  //faceSnap!: FaceSnap;
+  faceSnap$! : Observable<FaceSnap>;
   snapAdded! : boolean;
   textButtonSnap!: string;
 
@@ -24,23 +26,26 @@ export class SingleFaceSnapComponent implements OnInit{
     this.textButtonSnap = 'Ajouter un snap';
     // + cast le type de string (query) => int
     const faceSnapId = +this.route.snapshot.params['id'];
-    this.faceSnap = this.faceSnapService.getFaceSnapById(faceSnapId);
+    this.faceSnap$ = this.faceSnapService.getFaceSnapById(faceSnapId);
 ;  }
 
 
   onSnap() {
-    if (!this.snapAdded) {
-      this.faceSnapService.snapFaceSnapById(this.faceSnap.id, 'snap');
 
-      //this.faceSnap.snaps++;
-      this.snapAdded = true;
-      this.textButtonSnap = 'Tu as déja réagi';
-    } else {
-      this.faceSnapService.snapFaceSnapById(this.faceSnap.id, 'unsnap');
+    /*
+      if (!this.snapAdded) {
+        this.faceSnapService.snapFaceSnapById(this.faceSnap.id, 'snap');
 
-      this.snapAdded = false;
-      this.textButtonSnap = 'Ajouter un snap';
-    }
+        //this.faceSnap.snaps++;
+        this.snapAdded = true;
+        this.textButtonSnap = 'Tu as déja réagi';
+      } else {
+        this.faceSnapService.snapFaceSnapById(this.faceSnap.id, 'unsnap');
+
+        this.snapAdded = false;
+        this.textButtonSnap = 'Ajouter un snap';
+      }
+    */
   }
 
 }

@@ -9,11 +9,23 @@ import { LandingPageComponentComponent } from './landing-page-component/landing-
 
 import { BlogArticlesComponent } from './blog-articles/blog-articles.component';
 import { BlogComponent } from './blog/blog.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, FaceSnapListComponent, HeaderComponent, LandingPageComponentComponent, BlogComponent, BlogArticlesComponent],
+  imports: [
+    RouterOutlet,
+    CommonModule,
+    FaceSnapListComponent,
+    HeaderComponent,
+    LandingPageComponentComponent,
+    BlogComponent,
+    BlogArticlesComponent,
+
+
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

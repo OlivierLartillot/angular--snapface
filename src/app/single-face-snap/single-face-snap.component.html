@@ -1,4 +1,4 @@
-<div class="face-snap-card" [ngClass]="{'face-snap-card--snapped': snapAdded}">
+<div *ngIf="faceSnap$ | async as faceSnap" class="face-snap-card" [ngClass]="{'face-snap-card--snapped': snapAdded}">
   <h2>{{faceSnap.title | titlecase}}</h2>
 
   <a routerLink="/facesnaps"> << Retour</a>

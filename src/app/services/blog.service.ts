@@ -38,7 +38,7 @@ export class BlogService {
       imageUrl: 'https://cdn.pixabay.com/photo/2024/01/29/20/40/cat-8540772_1280.jpg',
       categorie: 'ville',
     },{
-      id: 3,
+      id: 4,
       title: 'Paris',
       textIntroduction: 'super article sur Paris',
       article: 'Ce deuxieme article parle de plein de choses intéressantes Paris et la tour Eiffeil !',
@@ -47,7 +47,7 @@ export class BlogService {
       imageUrl: 'https://cdn.pixabay.com/photo/2024/01/29/20/40/cat-8540772_1280.jpg',
       categorie: 'ville',
     },{
-      id: 3,
+      id: 5,
       title: 'Paris',
       textIntroduction: 'super article sur Paris',
       article: 'Ce deuxieme article parle de plein de choses intéressantes Paris et la tour Eiffeil !',
@@ -56,7 +56,7 @@ export class BlogService {
       imageUrl: 'https://cdn.pixabay.com/photo/2024/01/29/20/40/cat-8540772_1280.jpg',
       categorie: 'ville',
     },{
-      id: 3,
+      id: 6,
       title: 'Paris',
       textIntroduction: 'super article sur Paris',
       article: 'Ce deuxieme article parle de plein de choses intéressantes Paris et la tour Eiffeil !',
@@ -65,7 +65,7 @@ export class BlogService {
       imageUrl: 'https://cdn.pixabay.com/photo/2024/01/29/20/40/cat-8540772_1280.jpg',
       categorie: 'ville',
     },{
-      id: 3,
+      id: 7,
       title: 'Paris',
       textIntroduction: 'super article sur Paris',
       article: 'Ce deuxieme article parle de plein de choses intéressantes Paris et la tour Eiffeil !',
@@ -74,7 +74,7 @@ export class BlogService {
       imageUrl: 'https://cdn.pixabay.com/photo/2024/01/29/20/40/cat-8540772_1280.jpg',
       categorie: 'ville',
     },{
-      id: 3,
+      id: 8,
       title: 'Paris',
       textIntroduction: 'super article sur Paris',
       article: 'Ce deuxieme article parle de plein de choses intéressantes Paris et la tour Eiffeil !',
@@ -89,14 +89,14 @@ export class BlogService {
     return this.blogsArticles;
   }
 
-/*   getFaceSnapById(faceSnapId: number): FaceSnap {
-    const faceSnap = this.snaps.find(faceSnap => faceSnap.id === faceSnapId);
-    if (!faceSnap) {
+   getArticleById(articleId: number): Blog {
+    const article = this.blogsArticles.find(article => article.id === articleId);
+    if (!article) {
       throw new Error('FaceSnap Not Found');
     }
-    return faceSnap;
+    return article;
   }
-
+/*
   snapFaceSnapById(faceSnapId: number, snapType: 'snap' | 'unsnap'): void {
     const faceSnap = this.getFaceSnapById(faceSnapId);
     snapType == 'snap' ? faceSnap.snaps++ : faceSnap.snaps--;
