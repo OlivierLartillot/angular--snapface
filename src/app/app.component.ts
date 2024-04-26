@@ -3,12 +3,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 
 import { CommonModule, registerLocaleData } from '@angular/common';
 import * as fr from '@angular/common/locales/fr';
-import { FaceSnapListComponent } from './face-snap-list/face-snap-list.component';
-import { HeaderComponent } from './header/header.component';
-import { LandingPageComponentComponent } from './landing-page-component/landing-page-component.component';
+import { FaceSnapListComponent } from './face-snaps/components/face-snap-list/face-snap-list.component';
+import { HeaderComponent } from './core/components/header/header.component';
+import { LandingPageComponentComponent } from './landing-page/components/landing-page-component/landing-page-component.component';
 
-import { BlogArticlesComponent } from './blog-articles/blog-articles.component';
-import { BlogComponent } from './blog/blog.component';
+import { BlogArticlesComponent } from './blogs/components/blog-articles/blog-articles.component';
+import { BlogComponent } from './blogs/components/blog/blog.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
@@ -23,8 +23,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     LandingPageComponentComponent,
     BlogComponent,
     BlogArticlesComponent,
-
-
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

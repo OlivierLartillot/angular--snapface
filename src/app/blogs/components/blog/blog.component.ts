@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Blog } from '../../models/blog.model';
+import { Blog } from '../../../core/models/blog.model';
 import { CommonModule } from '@angular/common';
 import { BlogArticlesComponent } from '../blog-articles/blog-articles.component';
 import { Router } from '@angular/router';

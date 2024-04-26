@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FaceSnapsService } from '../services/face-snap.service';
+import { FaceSnapsService } from '../../../core/services/face-snap.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { FaceSnap } from '../../models/face-snap.model';
-import { Observable } from 'rxjs';
+import { FaceSnap } from '../../../core/models/face-snap.model';
+import { Observable, tap } from 'rxjs';
 
 @Component({
   selector: 'app-single-face-snap',
@@ -30,22 +30,33 @@ export class SingleFaceSnapComponent implements OnInit{
 ;  }
 
 
-  onSnap() {
-
-    /*
+  onSnap(faceSnapId: number) {
+      // avec le http on n a plus acces a this.faceSnap.id
+      // on va donc passer faceSnapId en paramètre de la méthode et récupérer l'argument depuis le template !!!
       if (!this.snapAdded) {
-        this.faceSnapService.snapFaceSnapById(this.faceSnap.id, 'snap');
+        this.faceSnap$ = this.faceSnapService.snapFaceSnapById(faceSnapId, 'snap').pipe(
+          tap(()=>{
+            //this.faceSnap.snaps++;
+            this.snapAdded = true;
+            this.textButtonSnap = 'Supprimer mon snap';
+            }
+          )
+        );
 
-        //this.faceSnap.snaps++;
-        this.snapAdded = true;
-        this.textButtonSnap = 'Tu as déja réagi';
       } else {
-        this.faceSnapService.snapFaceSnapById(this.faceSnap.id, 'unsnap');
+        this.faceSnap$ = this.faceSnapService.snapFaceSnapById(faceSnapId, 'unsnap').pipe(
+          tap(
+            () => {
+              this.snapAdded = false;
+              this.textButtonSnap = 'Ajouter un snap';
+            }
+          )
+        )
 
-        this.snapAdded = false;
-        this.textButtonSnap = 'Ajouter un snap';
       }
-    */
+
+
+
   }
 
 }

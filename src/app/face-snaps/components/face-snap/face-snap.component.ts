@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FaceSnap } from '../../models/face-snap.model';
+import { FaceSnap } from '../../../core/models/face-snap.model';
 import { CommonModule } from '@angular/common';
 import { FaceSnapListComponent } from '../face-snap-list/face-snap-list.component';
-import { FaceSnapsService } from '../services/face-snap.service';
+import { FaceSnapsService } from '../../../core/services/face-snap.service';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
